@@ -1,0 +1,34 @@
+﻿<div class="col-md-12">
+
+
+    <h3 class="display-4 header">Add a note</h3>
+
+
+    <form  novalidate name="noteForm" ng-submit="lm.addNote();">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input type="text" class="form-control" id="nameId" name="Name" ng-model="lm.newNote.user" required ng-minlength="5" />
+            <span ng-show="noteForm.Name.$error.required" class="text-warning">Name is Required</span>
+            <span ng-show="noteForm.Name.$error.minlength" class="text-warning">Name must be at least 5 char</span>
+        </div>
+        <div class="form-group">
+            <label for="Note">Note</label>
+            <textarea cols="40" rows="10" class="form-control" name="Note" ng-model="lm.newNote.content" placeholder="Notes" required ng-minlength="5"></textarea>
+            <span ng-show="noteForm.Note.$error.required" class="text-warning">Note is Required</span>
+            <span ng-show="noteForm.Note.$error.minlength" class="text-warning">Note must be at least 5 char</span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add" class="btn btn-primary btn-md" ng-disabled="noteForm.$invalid" />
+        </div>
+    </form>
+
+    <h3 class="noteHeader">Note display options</h3>
+    <button type="button" class="btn btn-primary float-right" ng-click="lm.getAllNotes();" style="margin-left:10px"> Show notes from all users @ this location</button>
+    <button type="button" class="btn btn-primary float-right" ng-click="lm.getUserNotes();" style="margin-left:10px">Show all notes by you @ this location</button>
+    <button type="button" class="btn btn-warning" ng-click="lm.getGlobalNotes();" style="margin-left:10px">Show all notes</button>
+    <button type="button" class="btn btn-primary  float-right" ng-click="lm.closeAllNotes();">Close All notes</button>
+
+
+
+
+</div>

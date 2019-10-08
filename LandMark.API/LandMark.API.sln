@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LandMark.API", "LandMark.API\LandMark.API.csproj", "{B694D0FC-7CB9-48D8-831F-9960B2A2B036}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LandMark.Front", "..\LandMark.Front\", "{DC1DB689-3023-4B8F-AF94-B3D9606CCED8}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_59297"
+		Debug.AspNetCompiler.PhysicalPath = "..\LandMark.Front\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59297\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_59297"
+		Release.AspNetCompiler.PhysicalPath = "..\LandMark.Front\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_59297\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "59297"
+		SlnRelativePath = "..\LandMark.Front\"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{291C4AFF-86FE-45B0-829B-1F653CFAE928}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B694D0FC-7CB9-48D8-831F-9960B2A2B036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B694D0FC-7CB9-48D8-831F-9960B2A2B036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B694D0FC-7CB9-48D8-831F-9960B2A2B036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B694D0FC-7CB9-48D8-831F-9960B2A2B036}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1DB689-3023-4B8F-AF94-B3D9606CCED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1DB689-3023-4B8F-AF94-B3D9606CCED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1DB689-3023-4B8F-AF94-B3D9606CCED8}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1DB689-3023-4B8F-AF94-B3D9606CCED8}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B66E1925-B772-436E-AD3E-2ABDC24B2823}
+	EndGlobalSection
+EndGlobal

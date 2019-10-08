@@ -1,0 +1,35 @@
+﻿<div class="col-md-12">
+
+    <h3 class="display-4 header">Search notes</h3>
+
+
+    <div class="input-group">
+        <input type="text" class="form-control" ng-model="query" />
+        <span class="input-group-btn">
+            <button type="button" ng-click="sc.search(query)" class="btn btn-primary ">Search</button>
+        </span>
+
+    </div>
+</div>
+
+<div class="col-md-12 table-responsive" style="margin-top:20px">
+    <table class="table  table-bordered" ng-show="sc.notes.length">
+        <thead class="thead-light">
+            <tr>
+                <th>#</th>
+                <th>User</th>
+                <th>Location</th>
+                <th>Note</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tr ng-repeat="note in sc.notes">
+            <td>#</td>
+            <td>{{note.user}}</td>
+            <td>{{note.address}}</td>
+            <td>{{note.content}}</td>
+            <td><button ng-click="sc.showOnMap(note)" class="btn  btn-primary">Show on Map</button></td>
+        </tr>
+    </table>
+
+</div>

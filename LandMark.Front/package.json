@@ -1,0 +1,25 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Package json file to manage dependencies and build process",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm run copy-libs",
+    "update-deps": "npm update",
+    "postupdate-deps": "npm run copy-libs",
+    "prestart": "npm install",
+    "start": "http-server ./app -a localhost -p 8000 -c-1 ",
+    "copy-libs": "cpx \"node_modules/{angular,angular-*,bootstrap/dist,jquery,popper.js/dist}/**/*\" app/lib -C"
+  },
+  "author": "tohidsmart@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
+    "bootstrap": "^4.3.1",
+    "cpx": "^1.5.0",
+    "http-server": "^0.11.1",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.14.7"
+  }
+}

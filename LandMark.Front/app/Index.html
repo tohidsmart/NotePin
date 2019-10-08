@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/popper.js/dist/popper.min.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFJPOE6TACQcKMN9MF62r-1qIvwlonJBQ"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="core/map.js"></script>
+    <script src="core/app.js"></script>
+    <script src="core/landMarkController.js"></script>
+    <script src="core/searchController.js"></script>
+
+
+    <style>
+        #map {
+            height: 100%;
+        }
+
+        #main {
+            margin-bottom: 10px
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        .header {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .noteHeader {
+            margin-bottom: 28px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 15px;
+        }
+    </style>
+
+</head>
+<body ng-app="app-landmark" onload="showUserName();">
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="#">Map Landmark Pin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" onclick="" href="#">Home <span class="sr-only">(current)</span></a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" ng-href="#/search">Search</a>
+                </li>
+            </ul>
+            <p class="float-right">
+                Welcome ,<span id="login"></span>
+            </p>
+
+
+
+        </div>
+    </nav>
+
+    <div id="main" class="container">
+
+        <div class="row" ng-view>
+        </div>
+    </div>
+
+    <div id="map" ng-controller="MapController"></div>
+
+    <script>
+        function showUserName() {
+            document.getElementById("login").innerHTML = getCookie();
+        }
+    </script>
+
+</body>
+
+
+
+</html>
